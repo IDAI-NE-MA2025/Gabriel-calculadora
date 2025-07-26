@@ -96,11 +96,11 @@
 
 		<div id="btns" class="btns">
 			<button id="suma" onclick="sumar()">Sumar</button>
-			<button id="resta">Restar</button>
-			<button id="multiplica">Multiplicar</button>
-			<button id="divide">Dividir</button>
-			<button id="exponente">Exponente</button>
-			<button id="raiz">Raiz</button>
+			<button id="resta"onclick="restar()">Restar</button>
+			<button id="multiplica"onclick="multiplicar()">Multiplicar</button>
+			<button id="divide"onclick="dividir()">Dividir</button>
+			<button id="exponente"onclick="elevar()">Exponente</button>
+			<button id="raiz"onclick="radicar()">Raiz</button>
 
 
 		</div>
@@ -125,8 +125,54 @@
 		
 		var mostrar = document.getElementById("resultado");
 		mostrar.innerHTML = resultado;
-	}
+
 		
+	}
+	function restar(){ 
+		var num1 = document.getElementById("numero1").value;
+		var num2 = document.getElementById("numero2").value;
+
+		var resultado = parseInt(num1) - parseInt(num2);
+
+		var mostrar = document.getElementById("resultado");
+		mostrar.innerHTML = resultado;
+	}
+	function multiplicar(){ 
+		var num1 = document.getElementById("numero1").value;
+		var num2 = document.getElementById("numero2").value;
+
+		var resultado = parseInt(num1) * parseInt(num2);
+
+		var mostrar = document.getElementById("resultado");
+		mostrar.innerHTML = resultado;
+	}	
+	function dividir(){ 
+		var num1 = document.getElementById("numero1").value;
+		var num2 = document.getElementById("numero2").value;
+
+		var resultado = parseInt(num1) / parseInt(num2);
+
+		var mostrar = document.getElementById("resultado");
+		mostrar.innerHTML = resultado;
+	}
+	function elevar(){ 
+		var num1 = document.getElementById("numero1").value;
+		var num2 = document.getElementById("numero2").value;
+
+		var resultado = parseInt(num1) ^ parseInt(num2);
+
+		var mostrar = document.getElementById("resultado");
+		mostrar.innerHTML = resultado;
+	}
+	function radicar(){ 
+		var num1 = document.getElementById("numero1").value;
+		var num2 = document.getElementById("numero2").value;
+
+		var resultado = Math.pow(parseInt(num1), 1 / parseInt(num2));
+
+		var mostrar = document.getElementById("resultado");
+		mostrar.innerHTML = resultado;
+	}
 	</script>
 </body>
 </html>
